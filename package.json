@@ -1,13 +1,9 @@
 {
   "devDependencies": {
-    "@wix/cli": "^1.0.0",
-    "@wix/eslint-plugin-cli": "^1.0.0",
-    "eslint": "^8.25.0",
-    "react": "16.14.0"
+    "@wix/cli": "KNOWN_COMPATIBLE_VERSION"
   },
   "scripts": {
-    "postinstall": "wix sync-types",
-    "dev": "wix dev",
-    "lint": "eslint ."
+    "sync-types": "wix SUPPORTED_TYPE_COMMAND",
+    "postinstall": "npm run sync-types"
   }
 }
