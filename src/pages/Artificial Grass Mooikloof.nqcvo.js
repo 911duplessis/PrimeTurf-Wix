@@ -1,6 +1,4 @@
 import wixSeo from 'wix-seo';
-<<<<<<< HEAD
-import { bindContent, setupCTAs } from 'public/pageSetup';
 
 function buildLocationSchemas(page) {
     return [
@@ -32,10 +30,6 @@ function buildLocationSchemas(page) {
         },
     ];
 }
-=======
-import { buildLocationSchemas } from 'public/schemas';
-import { bindContent, setupCTAs } from 'public/pageSetup';
->>>>>>> 5d1ccca9b1ce98455d4bf03c899f13bf5f0b5c1a
 
 $w.onReady(function () {
     const PAGE = {
@@ -59,23 +53,5 @@ $w.onReady(function () {
         ],
     };
 
-    const content = {
-        heroTitle: 'Artificial Grass Installation in Centurion',
-        heroSubtitle: 'Centurion Golf Estate · Lyttelton · Irene · Highveld',
-        heroDesc: 'Golf estate lawns, residential gardens, and complex common areas — Centurion\'s premium synthetic turf specialists.',
-        introTitle: 'Premium Artificial Grass in Centurion',
-        introText: 'PrimeTurf brings the same precision and standard that has made us trusted across Gauteng\'s finest addresses to Centurion. Whether it is a residential garden, a secure estate common area, or a commercial property, our installation process is engineered for longevity, drainage performance, and visual perfection from day one.',
-        areasTitle: 'Areas Covered in Centurion',
-        areasText: PAGE.suburbs.join(' · '),
-        ctaTitle: 'Get a Free Quote for Centurion',
-        ctaDesc: 'WhatsApp or call us. We respond within 2 hours.',
-    };
-
     wixSeo.setStructuredData(buildLocationSchemas(PAGE));
-    bindContent($w, content);
-    setupCTAs($w);
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> 5d1ccca9b1ce98455d4bf03c899f13bf5f0b5c1a
