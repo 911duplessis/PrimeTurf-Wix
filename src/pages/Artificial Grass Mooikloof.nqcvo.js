@@ -1,4 +1,5 @@
 import wixSeo from 'wix-seo';
+<<<<<<< HEAD
 import { bindContent, setupCTAs } from 'public/pageSetup';
 
 function buildLocationSchemas(page) {
@@ -31,6 +32,10 @@ function buildLocationSchemas(page) {
         },
     ];
 }
+=======
+import { buildLocationSchemas } from 'public/schemas';
+import { bindContent, setupCTAs } from 'public/pageSetup';
+>>>>>>> 5d1ccca9b1ce98455d4bf03c899f13bf5f0b5c1a
 
 $w.onReady(function () {
     const PAGE = {
@@ -69,4 +74,8 @@ $w.onReady(function () {
     wixSeo.setStructuredData(buildLocationSchemas(PAGE));
     bindContent($w, content);
     setupCTAs($w);
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> 5d1ccca9b1ce98455d4bf03c899f13bf5f0b5c1a
