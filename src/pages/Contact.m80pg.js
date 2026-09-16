@@ -1,10 +1,24 @@
-// API Reference: https://www.wix.com/velo/reference/api-overview/introduction
-// “Hello, World!” Example: https://learn-code.wix.com/en/article/hello-world
+import wixSeo from 'wix-seo';
+import { SITE } from 'public/siteConfig';
+import { setupCTAs } from 'public/pageSetup';
 
 $w.onReady(function () {
-    // Write your JavaScript here
+    wixSeo.setStructuredData([
+        {
+            '@context': 'https://schema.org',
+            '@type': 'ContactPage',
+            name: 'Contact PrimeTurf',
+            description: 'Contact PrimeTurf for a free artificial grass quote in Gauteng. Fast response, on-site consultation, and expert installation.',
+            url: SITE.url + '/contact',
+            mainEntity: {
+                '@type': 'LocalBusiness',
+                '@id': SITE.url + '/#organization',
+                name: SITE.name,
+                telephone: SITE.phone,
+                email: SITE.email,
+            },
+        },
+    ]);
 
-    // To select an element by ID use: $w('#elementID')
-
-    // Click 'Preview' to run your code
+    setupCTAs($w);
 });

@@ -1,6 +1,19 @@
 import wixData from 'wix-data';
+import wixSeo from 'wix-seo';
+import { SITE } from 'public/siteConfig';
 
 $w.onReady(function () {
+    wixSeo.setStructuredData([
+        {
+            '@context': 'https://schema.org',
+            '@type': 'WebPage',
+            name: 'Instant Artificial Grass Quote',
+            description: 'Get an instant, no-obligation quote for artificial grass installation anywhere in Gauteng or Cape Town.',
+            url: SITE.url + '/quote',
+            publisher: { '@type': 'Organization', '@id': SITE.url + '/#organization' },
+        },
+    ]);
+
     let configPromise = buildConfig();
 
     $w('#html2').onMessage((event) => {
